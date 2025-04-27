@@ -398,54 +398,43 @@ footer {
   text-align: right;
  }
 
- @media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
+/* Responsividad: hacer el texto más pequeño en pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
   }
-
-  header h1 {
-    font-size: 2rem;
+  h2 {
+    font-size: 1.5rem;
   }
-
-  nav ul {
-    text-align: center;
+  p {
+    font-size: 1rem;
   }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
+  /* Las imágenes deben adaptarse bien a pantallas pequeñas */
+  .gallery-images img {
+    width: 100%;
+    max-width: 90%;
   }
-
-  .container {
-    width: 95%;
+  /* Hacemos que el formulario ocupe el 100% en dispositivos pequeños */
+  form {
+    width: 100%;
+  }
+  input, textarea {
+    width: 100%;
     padding: 10px;
+    margin: 10px 0;
   }
 }
 
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 12px;
+/* Mejorar el diseño en pantallas grandes */
+@media (min-width: 769px) {
+  /* Hacer que los elementos de la galería se distribuyan en filas */
+  .gallery-images {
+    flex-wrap: nowrap;
   }
 
-  header {
-    padding: 15px 0;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  nav ul li {
-    margin-bottom: 5px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 5px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  .gallery-images img {
+    width: 30%;
+    margin: 10px;
+ 
+}
 }
