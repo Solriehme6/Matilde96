@@ -397,43 +397,110 @@ footer {
   padding: 10px;
   text-align: right;
  }
-/* Responsividad: hacer el texto más pequeño en pantallas pequeñas */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
+ 
+ @media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
   }
-  h2 {
+
+  nav {
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 15px;
+    border-right: none;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 4rem;
+  }
+
+  .subtitulo {
     font-size: 1.5rem;
   }
-  p {
+
+  .intro-text {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .intro-text img {
+    max-width: 100%;
+  }
+
+  section h2 {
+    font-size: 3rem;
+  }
+
+  section h3 {
+    font-size: 2rem;
+  }
+
+  section p {
     font-size: 1rem;
   }
-  /* Las imágenes deben adaptarse bien a pantallas pequeñas */
-  .gallery-images img {
-    width: 100%;
-    max-width: 90%;
-  }
-  /* Hacemos que el formulario ocupe el 100% en dispositivos pequeños */
-  form {
-    width: 100%;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-  }
-}
 
-/* Mejorar el diseño en pantallas grandes */
-@media (min-width: 769px) {
-  /* Hacer que los elementos de la galería se distribuyan en filas */
   .gallery-images {
-    flex-wrap: nowrap;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-images img {
-    width: 30%;
-    margin: 10px;
- 
+  .comentarios-container {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .comentario {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  section h3 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  .comentarios-container {
+    display: block;
+    gap: 10px;
+  }
 }
