@@ -397,7 +397,6 @@ footer {
   padding: 10px;
   text-align: right;
  }
-
 /* Responsividad: hacer el texto más pequeño en pantallas pequeñas */
 @media (max-width: 768px) {
   h1 {
@@ -437,4 +436,4 @@ footer {
     margin: 10px;
  
 }
-}
+
