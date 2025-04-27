@@ -301,11 +301,11 @@ form button:hover {
   box-sizing: border-box;
 }
 .arbol-img {
-  display: block;
+  display: center;
   margin: 0;
-  max-width: 80vw;
+  max-width: 100%;
   height: auto;
-  transform: translateX(-100px);
+  
 }
 
 .video {
