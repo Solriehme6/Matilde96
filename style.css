@@ -217,7 +217,7 @@ section p {
 }
 
 .comentario {
-  max-width: 45%; 
+  max-width: 100%; 
   background-color: #6e4b3b;
   padding: 1rem 1.5rem;
   border-left: 4px solid #5e4432;
